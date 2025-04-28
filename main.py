@@ -55,7 +55,7 @@ def main(input_path: str, output_path: str) -> None:
 
 
 if __name__ == "__main__":
-    # verify the correct numbe of arguments are read from CMD
+    # verify the correct number of arguments are read from CMD
     if len(sys.argv) == 2:
         # generate a unique name for the report to avoid overwriting
         timestamp_str = datetime.now().strftime("%Y%m%d_%H%M%S")

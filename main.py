@@ -25,6 +25,8 @@ def process_row(row: list[str], log_processes: dict[str, logProfile], outfile) -
         elif total_minutes > 10:
             outfile.write("ERROR: Job - " + name + " - took more than 10 minutes to complete.\n")
 
+        del log_processes[process]
+
 def main(input_path: str, output_path: str) -> None:
     if not os.path.exists(input_path):
         raise FileNotFoundError(f"The file {input_path} does not exist.")
